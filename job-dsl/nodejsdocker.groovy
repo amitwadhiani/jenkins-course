@@ -39,7 +39,7 @@ job('Angular RealWorld Frontend') {
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
-        shell("npm install -g @angular/cli@latest && yarn install && ng build")
+        shell("npm install -g @angular/cli@latest && ng build")
         dockerBuildAndPublish {
             repositoryName('amit0wadhiani/angularRealworldFrontend')
             tag('${GIT_REVISION,length=9}')
