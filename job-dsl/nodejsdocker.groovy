@@ -41,7 +41,7 @@ job('Angular RealWorld Frontend') {
     steps {
         shell("npm install -g @angular/cli@latest && npm install --global yarn && yarn install")
         dockerBuildAndPublish {
-            repositoryName('amit0wadhiani/angularRealworldFrontend')
+            repositoryName('amit0wadhiani/angularrealworldfrontend')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('998ffb10-3286-4316-9fad-ef16a26aaa52')
             forcePull(false)
